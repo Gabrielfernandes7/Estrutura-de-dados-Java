@@ -53,3 +53,39 @@ public class PolimorfismoExemplo {
 #### Encapsulamento
 
 O encapsulamento envolve ocultar os detalhes de implementação de um objeto.
+
+## Básico de Java
+
+```java
+class Main {
+    public class static void main(String[] args) {
+        System.out.println("Java");
+    }
+}
+```
+
+**Tipos primitivos de variáveis:**
+
+- boolean, byte, char, short, int, long, float, double
+
+**Entrada / Saída:**
+
+```java
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.print("Java");
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite um número inteiro");
+
+        int numeroInteiro = scanner.nextInt();
+
+        System.out.print("Você digitou o número " + numeroInteiro);
+
+        scanner.close();
+    }
+}
+```
