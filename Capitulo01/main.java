@@ -1,3 +1,5 @@
+package Capitulo01;
+
 import java.util.Scanner;
 
 class Main {

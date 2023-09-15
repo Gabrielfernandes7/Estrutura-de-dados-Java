@@ -1,5 +1,9 @@
 # Java
 
-## Capítulo 1
+## Capítulo 1 - Overview
 
-* [Overview e Pilares da POO](/Capitulo%2001/README.md)
+- [Overview e Pilares da POO](/Capitulo01/README.md)
+
+## Capítulo 2 - Arrays
+
+- [Arrays](/Capitulo02/README.md)
