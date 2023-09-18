@@ -62,6 +62,8 @@ public class ArrayCriado {
 
 - Busca Linear
 
+  - [Busca Linear](/BuscaLinear.java)
+
 - Busca Binária
 
 ## Remoção
