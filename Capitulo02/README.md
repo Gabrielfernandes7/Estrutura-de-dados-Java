@@ -6,11 +6,11 @@ por meio de um índice que começa por 0 o primeiro elemento.
 
 ```java
 // Declarando e inicializando um vetor inteiro de 5 elementos
-int[] numeros = new int[5];
+int[] numeros = new int[5]; // 0, 1, 2, 3, 4
 
 String[] nomes = {"Nome 1", "Nome 2", "Nome 3"};
 
-int tamanhoVetorNumeros = numeros.length;
+int tamanhoVetorNumeros = numeros.length; // 5
 
 int primeiroElementoNumeros = numeros[0];
 String segundoElementoNomes = nomes[1];
@@ -23,7 +23,7 @@ for (int i = 0; i < tamanhoVetorNumeros; i++) {
 // Matrizes
 int [][] matriz = new int[3][3];
 
-matriz[0][0] = 1;
+matriz[0][0] = 1; // guardando na posicao 00 na matriz o valor 1
 matriz[1][1] = 2;
 
 // Iteração sobre uma matriz
@@ -38,7 +38,6 @@ for (int i = 0; i < matriz.length; i++) {
 ## Inserção
 
 Para inserir intens em um array
-c3po
 
 ```java
 public class ArrayCriado {

@@ -7,3 +7,5 @@
 ## Capítulo 2 - Arrays
 
 - [Arrays](/Capitulo02/README.md)
+    - [Busca Linear](/Capitulo02/BuscaLinear.java)
+    - [Busca Binária](/Capitulo02/BuscaBinaria.java)
