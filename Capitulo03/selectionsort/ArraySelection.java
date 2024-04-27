@@ -1,13 +1,11 @@
-package Capitulo03.bubblesort;
+package Capitulo03.selectionsort;
 
-public class ArrayBubble {
+public class ArraySelection {
     private long[] vetorA;
     private int numeroElementos;
 
-    // o vetor começa vazio e suporta até (max - 1) elementos
-    // o vetor é inicializado com 0 elementos
-    public ArrayBubble(int max) {
-        vetorA = new long[max]; // cria o vetor
+    public ArraySelection(int max) {
+        vetorA = new long[max];
         numeroElementos = 0;
     }
 
@@ -22,17 +20,18 @@ public class ArrayBubble {
         }
     }
 
-    public void bubblesortAlgoritmo() {
-        int out, in;
+    public void selectionsortAlgoritmo() {
+        int out, in, min;
 
-        for (out = numeroElementos - 1; out > 1; out--) // laço externo - para trás
-        {
-            for (in = 0; in < out; in++) // laço interno - para frente
-            {
-                if (vetorA[in] > vetorA[in + 1]) {
-                    swap(in, in+1);
+        for (out = 0; out < numeroElementos -1; out++) {
+            min = out;
+
+            for (in = out + 1; in < numeroElementos; in++) {
+                if (vetorA[in] < vetorA[in + 1]) {
+                    min = in;
                 }
             }
+            swap(out, min);
         }
     }
 
