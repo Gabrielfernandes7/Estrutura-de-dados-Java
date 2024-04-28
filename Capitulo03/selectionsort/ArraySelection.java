@@ -27,7 +27,7 @@ public class ArraySelection {
             min = out;
 
             for (in = out + 1; in < numeroElementos; in++) {
-                if (vetorA[in] < vetorA[in + 1]) {
+                if (vetorA[in] < vetorA[min]) {
                     min = in;
                 }
             }
