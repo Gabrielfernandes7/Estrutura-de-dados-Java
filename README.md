@@ -9,3 +9,9 @@
 - [Arrays](/Capitulo02/README.md)
     - [Busca Linear](/Capitulo02/BuscaLinear.java)
     - [Busca Binária](/Capitulo02/BuscaBinaria.java)
+
+## Algoritmos de ordenação
+
+- Bubblesort
+
+- Selectionsort
