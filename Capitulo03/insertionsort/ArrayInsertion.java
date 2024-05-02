@@ -19,4 +19,20 @@ public class ArrayInsertion {
             System.out.println(vetorA[j]);
         }
     }
+
+    public void insertionsortAlgoritmo() {
+        int in, out;
+
+        for (out = 1; out < numeroElementos; out++) {
+            long temp = vetorA[out];
+            in = out;
+
+            while (in > 0 && vetorA[in-1] >= temp) {
+                vetorA[in] = vetorA[in-1];
+                --in;
+            }
+
+            vetorA[in] = temp;
+        }
+    }
 }
