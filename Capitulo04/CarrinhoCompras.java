@@ -29,4 +29,18 @@ public class CarrinhoCompras {
             }
         }
     }
+
+    public double calcularPrecoTotal() {
+        double total = 0;
+
+        if (produtos.isEmpty()) {
+            System.out.println("Carrinho de compras vazio");
+        } else {
+            for (Produto produto : produtos) {
+                total += produto.getPreco();
+            }
+        }
+        
+        return total;
+    }
 }

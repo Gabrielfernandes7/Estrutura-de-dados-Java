@@ -1,19 +1,21 @@
 package Capitulo04;
 
 public class Produto {
-    private Integer id;
+    private int id;
     private String nomeProduto;
+    private double preco;
 
-    public Produto(Integer id, String nomeProduto) {
+    public Produto(int id, String nomeProduto, double preco) {
         this.id = id;
         this.nomeProduto = nomeProduto;
+        this.preco = preco;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -23,5 +25,13 @@ public class Produto {
 
     public void setNome(String nomeProduto) {
         this.nomeProduto = nomeProduto;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 }
