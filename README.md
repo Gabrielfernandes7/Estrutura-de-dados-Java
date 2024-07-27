@@ -10,8 +10,10 @@
     - [Busca Linear](/Capitulo02/BuscaLinear.java)
     - [Busca Binária](/Capitulo02/BuscaBinaria.java)
 
-## Algoritmos de ordenação
+## Capítulo 3 - Algoritmos de ordenação
 
-- Bubblesort
+- [Algoritmos de ordenação](/Capitulo03/README.md)
+    - [Bubblesort](/Capitulo03/bubblesort/)
+    - [Insertionsort](/Capitulo03/insertionsort/)
+    - [Selectionsort](/Capitulo03/selectionsort/)
 
-- Selectionsort

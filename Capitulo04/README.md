@@ -1,4 +1,6 @@
-# Estrutura de dados - Listas
+# Estrutura de dados
+
+##  Listas
 
 A estrutura de dados Listas são uma estrutura de dados fundamental
 na programação e são utilizadas para armazenar coleções de elementos
