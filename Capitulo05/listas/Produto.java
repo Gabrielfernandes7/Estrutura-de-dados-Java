@@ -1,4 +1,4 @@
-package Capitulo04;
+package Capitulo05.listas;
 
 public class Produto {
     private int id;

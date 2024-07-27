@@ -1,49 +1,59 @@
-# Estrutura de dados
+## Pilhas
 
-##  Listas
+A estrutura de dados Pilhas (Stacks) é uma estrutura fundamental na programação e é utilizada para armazenar elementos de maneira que o último elemento inserido seja o primeiro a ser removido (LIFO - Last In, First Out).
 
-A estrutura de dados Listas são uma estrutura de dados fundamental
-na programação e são utilizadas para armazenar coleções de elementos
-de maneira ordenada.
+**Uso real**: Verificação de parênteses balanceados em expressões matemáticas ou de código, navegação entre páginas web (back/forward), chamadas de funções recursivas etc. Pilhas são frequentemente usadas para implementar funcionalidades de desfazer/refazer em editores de texto, gráficos, etc. Uma pilha é usada para armazenar ações que podem ser desfeitas, enquanto outra pilha é usada para ações que podem ser refeitas.
 
-**Uso real**: Carrinho de compras de uma plataforma de ecommerce, histórico de um navegador, Sistema de gerenciamento de tarefas etc.
-
-No Java existe duas maneiras de implementar as listas, sendo elas:
-
-**ArrayList**: Implementação da interface List que usa um array interno para armazenar os elementos. Ele fornece operações de acesso rápido aos elementos, mas pode ser menos eficiente em operações de inserção e remoção no meio da lista, pois requer deslocamento de elementos.
-
-**LinkedList**: Implementação da interface List que usa uma estrutura de lista duplamente encadeada. Ela fornece operações eficientes de inserção e remoção no meio da lista, mas o acesso aos elementos pode ser mais lento do que em um ArrayList, pois requer percorrimento sequencial.
+No Java, a implementação de uma pilha pode ser feita utilizando a classe `Stack` da biblioteca padrão:
 
 ```java
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
-public class Main {
-    public static void main(String[] args) {
-        // Criando um ArrayList de Strings
-        List<String> lista = new ArrayList<>();
+public class BalancedParentheses {
+    public static boolean isBalanced(String expression) {
+        Stack<Character> stack = new Stack<>();
 
-        // Adicionando elementos à lista
-        lista.add("Maçã");
-        lista.add("Banana");
-        lista.add("Laranja");
-
-        // Acessando elementos da lista
-        System.out.println("Elementos da lista:");
-        for (String elemento : lista) {
-            System.out.println(elemento);
+        for (char ch : expression.toCharArray()) {
+            if (ch == '(' || ch == '{' || ch == '[') {
+                stack.push(ch);
+            } else if (ch == ')' || ch == '}' || ch == ']') {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                char top = stack.pop();
+                if (!isMatchingPair(top, ch)) {
+                    return false;
+                }
+            }
         }
+        return stack.isEmpty();
+    }
 
-        // Acessando um elemento específico
-        String primeiroElemento = lista.get(0);
-        System.out.println("Primeiro elemento: " + primeiroElemento);
+    private static boolean isMatchingPair(char open, char close) {
+        return (open == '(' && close == ')') ||
+               (open == '{' && close == '}') ||
+               (open == '[' && close == ']');
+    }
 
-        // Removendo um elemento da lista
-        lista.remove("Banana");
-        System.out.println("Elementos após a remoção:");
-        for (String elemento : lista) {
-            System.out.println(elemento);
+    public static void main(String[] args) {
+        String expression = "{[()]}";
+        if (isBalanced(expression)) {
+            System.out.println("The expression is balanced.");
+        } else {
+            System.out.println("The expression is not balanced.");
         }
     }
 }
 ```
+
+### Explicação
+
+1. **Importação e Definição**: Importamos a classe `Stack` e definimos a classe `BalancedParentheses` para verificar se uma expressão tem parênteses balanceados.
+
+2. **Método `isBalanced`**: Percorremos a expressão caractere por caractere. Se o caractere for um parêntese de abertura (`(`, `{`, `[`), ele é empilhado. Se for um parêntese de fechamento (`)`, `}`, `]`), verificamos se o topo da pilha é o par correspondente.
+
+3. **Método `isMatchingPair`**: Verifica se os parênteses abertos e fechados correspondem.
+
+4. **Método `main`**: Testa a funcionalidade com uma expressão de exemplo.
+
+O exemplo mostra como as pilhas podem ser usadas para resolver problemas de balanceamento de parênteses, uma aplicação prática comum no dia a dia dos desenvolvedores.
