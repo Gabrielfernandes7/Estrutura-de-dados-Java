@@ -57,3 +57,60 @@ public class BalancedParentheses {
 4. **Método `main`**: Testa a funcionalidade com uma expressão de exemplo.
 
 O exemplo mostra como as pilhas podem ser usadas para resolver problemas de balanceamento de parênteses, uma aplicação prática comum no dia a dia dos desenvolvedores.
+
+## Filas
+
+A estrutura de dados Filas (Queues) é fundamental na programação e é utilizada para armazenar elementos de maneira que o primeiro elemento inserido seja o primeiro a ser removido (FIFO - First In, First Out).
+
+**Uso real**: Filas são amplamente utilizadas em sistemas de gerenciamento de tarefas, processamento de requisições web, impressão de documentos, sistemas de mensagens, entre outros. Por exemplo, em um servidor web, as requisições dos clientes são enfileiradas para serem processadas na ordem de chegada, garantindo justiça e eficiência.
+
+No Java, a implementação de uma fila pode ser feita utilizando a classe `LinkedList` da biblioteca padrão, que implementa a interface `Queue`:
+
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class WebRequestQueue {
+    public static void main(String[] args) {
+        // Cria uma fila para gerenciar requisições
+        Queue<String> requestQueue = new LinkedList<>();
+
+        // Adiciona algumas requisições à fila
+        requestQueue.add("Requisição 1: /index.html");
+        requestQueue.add("Requisição 2: /about.html");
+        requestQueue.add("Requisição 3: /contact.html");
+
+        // Processa as requisições na ordem em que chegaram
+        while (!requestQueue.isEmpty()) {
+            String request = requestQueue.poll();
+            processRequest(request);
+        }
+    }
+
+    private static void processRequest(String request) {
+        System.out.println("Processando " + request);
+        // Aqui você pode adicionar o código para processar a requisição
+    }
+}
+```
+
+### Explicação
+
+1. **Criação da Fila**:
+   - Utilizamos a classe `LinkedList`, que implementa a interface `Queue`, para criar uma fila de requisições (`requestQueue`).
+
+2. **Adição de Requisições**:
+   - As requisições são adicionadas à fila usando o método `add()`.
+
+3. **Processamento de Requisições**:
+   - As requisições são processadas na ordem em que chegaram, utilizando um laço `while` que continua até que a fila esteja vazia.
+   - O método `poll()` remove e retorna a cabeça da fila (a primeira requisição).
+   - O método `processRequest()` simula o processamento da requisição.
+
+### Referências
+
+1. Documentação da interface `Queue` do Java: [Java Queue Interface](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
+2. Artigo sobre uso de Filas em Java: [Queue in Java](https://www.geeksforgeeks.org/queue-interface-java/)
+3. Guia sobre estruturas de dados em Java: [Data Structures in Java](https://www.baeldung.com/java-data-structures)
+
+Essas referências fornecem uma base sólida para entender e implementar filas em Java, com exemplos práticos e explicações detalhadas.
