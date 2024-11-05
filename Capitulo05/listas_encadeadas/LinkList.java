@@ -13,13 +13,17 @@ public class LinkList {
 
     public void insertFirst(int id, double dd) {
         Link newLink = new Link(id, dd);
-        newLink.next = firstLink;
+        newLink.next = firstLink; // O novo nó aponta para o antigo primeiro nó
+        firstLink = newLink; // O primeiro nó agora é o novo nó
     }
 
     public Link deleteFirst() {
-        Link temp = firstLink;
-        firstLink = firstLink.next;
-        return temp;
+        if (isEmpty()) {
+            return null; // Retorna null se a lista estiver vazia
+        }
+        Link temp = firstLink; // armazena o nó a ser removido
+        firstLink = firstLink.next; // o primeiro nó agora é o próximo nó
+        return temp; // retorna o nó removido
     }
 
     public void displayLink() {
@@ -27,8 +31,8 @@ public class LinkList {
         Link current = firstLink;
 
         while (current != null) {
-            current.displayLink();
-            current = current.next;
+            current.displayLink(); // exibe o nó atual
+            current = current.next; // avança para o próximo nó
         }
 
         System.out.println("");

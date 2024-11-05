@@ -13,6 +13,6 @@ public class Link {
 
     // exibe os nós
     public void displayLink() {
-        System.out.print("{" + iData + " , " + dData + "}");
+        System.out.print("{" + iData + " , " + dData + "} \n");
     }
 }
