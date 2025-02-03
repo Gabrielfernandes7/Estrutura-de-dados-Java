@@ -16,10 +16,11 @@ public class AnagramaAPP {
         for (int j = 0; j < size; j++) {
             arrChar[j] = input.charAt(j); // coloca-lo no vetor
         }
-        
+
         doAnagram(size);
     }
 
+    // Esse método gera anagramas recursivamente
     public static void doAnagram(int newSize) {
         if (newSize == 1) {
             return;

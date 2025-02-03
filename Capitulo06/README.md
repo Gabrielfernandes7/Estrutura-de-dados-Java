@@ -20,3 +20,8 @@ int fatorial(int n) {
 
 Podemos aplicar recursão em anagramas
 
+## Busca binária recursiva
+
+## Algoritmos do tipo dividir e conquistar
+
+## Torres de Hanói
